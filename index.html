@@ -53,6 +53,7 @@
           >
             <span
               :class="todo.done === true ? 'text-decoration-line-through' : '' "
+              @click="todo.done = !todo.done"
               >{{ todo.text }}</span
             >
             <i
