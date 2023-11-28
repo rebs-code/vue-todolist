@@ -48,7 +48,11 @@
             role="button"
             v-for="(todo, index) in todos"
           >
-            {{ todo.text }} <i class="fa-solid fa-square-xmark fa-lg"></i>
+            <span
+              :class="todo.done === true ? 'text-decoration-line-through' : '' "
+              >{{ todo.text }}</span
+            >
+            <i class="fa-solid fa-square-xmark fa-lg"></i>
           </li>
         </ul>
       </div>
