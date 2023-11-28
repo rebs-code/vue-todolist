@@ -33,11 +33,13 @@
             placeholder="Add a todo"
             aria-label="Add todo"
             aria-describedby="button-addon2"
+            v-model="newTodo"
           />
           <button
             class="btn btn-secondary px-4"
             type="button"
             id="button-addon2"
+             @click="addTodo"
           >
             Add
           </button>
