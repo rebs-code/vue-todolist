@@ -52,7 +52,8 @@
               :class="todo.done === true ? 'text-decoration-line-through' : '' "
               >{{ todo.text }}</span
             >
-            <i class="fa-solid fa-square-xmark fa-lg"></i>
+            <i class="fa-solid fa-square-xmark fa-lg"
+            @click="deleteTodo(index)"></i>
           </li>
         </ul>
       </div>
