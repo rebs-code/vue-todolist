@@ -19,12 +19,12 @@ createApp({
       this.todos.splice(index, 1);
     },
     addTodo() {
-        if (this.newTodo.trim("") === "") {
-            this.newTodo = "";
-            return;
-        }
-        this.todos.push({ text: this.newTodo, done: false });
+      if (this.newTodo.trim("") === "") {
         this.newTodo = "";
+        return;
+      }
+      this.todos.push({ text: this.newTodo, done: false });
+      this.newTodo = "";
     },
   },
 }).mount("#app");

@@ -34,12 +34,13 @@
             aria-label="Add todo"
             aria-describedby="button-addon2"
             v-model="newTodo"
+            @keyup.enter="addTodo"
           />
           <button
             class="btn btn-secondary px-4"
             type="button"
             id="button-addon2"
-             @click="addTodo"
+            @click="addTodo"
           >
             Add
           </button>
@@ -54,8 +55,10 @@
               :class="todo.done === true ? 'text-decoration-line-through' : '' "
               >{{ todo.text }}</span
             >
-            <i class="fa-solid fa-square-xmark fa-lg"
-            @click="deleteTodo(index)"></i>
+            <i
+              class="fa-solid fa-square-xmark fa-lg"
+              @click="deleteTodo(index)"
+            ></i>
           </li>
         </ul>
       </div>
